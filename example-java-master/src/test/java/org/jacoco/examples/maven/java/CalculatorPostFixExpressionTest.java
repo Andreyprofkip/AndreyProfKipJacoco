@@ -11,7 +11,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 
 @RunWith(Enclosed.class)
-public class AppTest {
+public class CalculatorPostFixExpressionTest {
 
     @RunWith(Parameterized.class)
     public static class ParameterizeSumTest {
