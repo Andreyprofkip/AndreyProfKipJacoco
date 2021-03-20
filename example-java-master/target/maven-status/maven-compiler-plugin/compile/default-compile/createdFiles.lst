@@ -1,0 +1,7 @@
+org\jacoco\examples\maven\java\CheckingInfixExpression.class
+org\jacoco\examples\maven\java\InfixToPostfix.class
+org\jacoco\examples\maven\java\MyExceptions\NanException.class
+org\jacoco\examples\maven\java\Main.class
+org\jacoco\examples\maven\java\TransformatorWithNegativeNumbersInfixExpression.class
+org\jacoco\examples\maven\java\CalculatorPostFixExpression.class
+org\jacoco\examples\maven\java\MyExceptions\IncorrectExpressionException.class

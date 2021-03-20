@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CheckingInfixExpression.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCo Maven plug-in example for Java project</a> &gt; <a href="index.source.html" class="el_package">org.jacoco.examples.maven.java</a> &gt; <span class="el_source">CheckingInfixExpression.java</span></div><h1>CheckingInfixExpression.java</h1><pre class="source lang-java linenums">package org.jacoco.examples.maven.java;
+
+import org.jacoco.examples.maven.java.MyExceptions.IncorrectExpressionException;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+<span class="nc" id="L8">public class CheckingInfixExpression {</span>
+
+    public static void checking(String expression) throws IncorrectExpressionException{
+<span class="nc" id="L11">        String regex1 = &quot;[^0-9-+\\()\\/*]&quot;;</span>
+<span class="nc" id="L12">        Pattern pattern1 = Pattern.compile(regex1);</span>
+<span class="nc" id="L13">        Matcher matcher1 = pattern1.matcher(expression);</span>
+<span class="nc bnc" id="L14" title="All 2 branches missed.">        if(matcher1.find()) throw new IncorrectExpressionException(&quot;Expression contains invalid characters&quot;);</span>
+<span class="nc" id="L15">        String regex2 = &quot;[*+-\\/]{2}&quot;;</span>
+<span class="nc" id="L16">        Pattern pattern2 = Pattern.compile(regex2);</span>
+<span class="nc" id="L17">        Matcher matcher2 = pattern2.matcher(expression);</span>
+<span class="nc bnc" id="L18" title="All 2 branches missed.">        if(matcher2.find()) throw new IncorrectExpressionException(&quot;Expression contains repetition of operators&quot;);</span>
+
+<span class="nc bnc" id="L20" title="All 2 branches missed.">        if(expression.equals(&quot;&quot;)) throw new IncorrectExpressionException(&quot;String is null&quot;);</span>
+<span class="nc" id="L21">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
